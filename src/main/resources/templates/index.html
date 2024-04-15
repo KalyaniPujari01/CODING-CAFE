@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Index</title>
+    <link rel="stylesheet" href="../static/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <nav class="bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between h-16">
+          <div class="flex">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center">
+              <img
+                class="block lg:hidden h-8 w-auto"
+                src="https://via.placeholder.com/64"
+                alt="Logo"
+              />
+              <img
+                class="hidden lg:block h-8 w-auto"
+                src="https://via.placeholder.com/64"
+                alt="Logo"
+              />
+            </div>
+          </div>
+          <!-- Login and Signup Buttons -->
+          <div class="flex items-center space-x-4">
+            <!-- Search Bar -->
+            <div class="mt-1 relative">
+              <input
+                class="bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 py-1 px-4 rounded-lg pl-10"
+                type="text"
+                placeholder="Search..."
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-6 absolute top-1.5 left-3 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </div>
+
+            <a href="login"
+              class="bg-gray-700 hover:bg-gray-600 text-white py-1 px-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              Login
+            </a>
+            <a href="signup"
+              class="bg-gray-700 hover:bg-gray-600 text-white py-1 px-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              Signup
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="container mx-1 flex flex-col lg:flex-row items-center justify-center"
+    >
+      <!-- Image on left side (large screen) -->
+      <div class="lg:w-1/2 lg:order-1">
+        <img
+          src="Images/homee.jpeg"
+          alt="Image"
+          class="w-full h-auto mt-1 lg:h-full"
+        />
+      </div>
+      <!-- Text and button on right side (large screen) -->
+      <div class="lg:w-1/2 lg:order-2 text-center lg:text-left ml-8">
+        <h1 class="text-4xl lg:text-5xl font-bold mb-4">
+          Welcome to Coding-Cafe />
+        </h1>
+        <p class="text-lg lg:text-xl text-gray-700 mb-8">
+          Learn Coding from <b>A - Z</b> , from <b>Beginner - Pro </b> For
+          <b>Free!!!</b>
+        </p>
+        <a
+          href="signup"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-48"
+          >Get Started</a
+        >
+      </div>
+    </div>
+  </body>
+</html>

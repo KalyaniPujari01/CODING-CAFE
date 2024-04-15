@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Courses</title>
+    <link rel="stylesheet" href="../static/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <nav class="bg-gray-800 fixed w-full z-10 top-0">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between h-16">
+          <div class="flex">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center">
+              <img
+                class="block lg:hidden h-8 w-auto"
+                src="https://via.placeholder.com/64"
+                alt="Logo"
+              />
+              <img
+                class="hidden lg:block h-8 w-auto"
+                src="https://via.placeholder.com/64"
+                alt="Logo"
+              />
+            </div>
+          </div>
+          <!-- Hamburger Menu -->
+          <div class="flex lg:hidden">
+            <button
+              id="mobile-menu-button"
+              class="text-gray-400 hover:text-white focus:outline-none focus:text-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
+          </div>
+          <!-- Menu -->
+          <div class="hidden lg:flex lg:items-center">
+            <!-- Search Bar -->
+            <div class="mt-1 relative">
+              <input
+                class="bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 py-1 px-4 rounded-lg pl-10"
+                type="text"
+                placeholder="Search..."
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-6 absolute top-1.5 left-3 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </div>
+
+            <a
+              href="home"
+              class="ml-4 px-3 py-2 text-white hover:bg-gray-700 rounded-lg focus:outline-none focus:bg-gray-700"
+            >
+              Home
+            </a>
+            <a
+              href="courses"
+              class="ml-4 px-3 py-2 text-white hover:bg-gray-700 rounded-lg focus:outline-none focus:bg-gray-700"
+            >
+              Courses
+            </a>
+            <a
+              href="contact"
+              class="ml-4 px-3 py-2 text-white hover:bg-gray-700 rounded-lg focus:outline-none focus:bg-gray-700"
+            >
+              Contact
+            </a>
+            <a
+              href="login"
+              class="ml-4 px-3 py-2 text-white hover:bg-gray-700 rounded-lg focus:outline-none focus:bg-gray-700"
+            >
+              Sign Out
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="lg:hidden" id="mobile-menu" style="display: none">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a
+            href="home"
+            class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-gray-700"
+          >
+            Home
+          </a>
+          <a
+            href="courses"
+            class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-gray-700"
+          >
+            Courses
+          </a>
+          <a
+            href="contact"
+            class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-gray-700"
+          >
+            Contact
+          </a>
+          <a
+            href="login"
+            class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-gray-700"
+          >
+            Sign Out
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          var mobileMenu = document.getElementById("mobile-menu");
+          mobileMenu.style.display =
+            mobileMenu.style.display === "none" ||
+            mobileMenu.style.display === ""
+              ? "block"
+              : "none";
+        });
+    </script>
+
+
+
+    <div class="mt-20 flex flex-wrap justify-center">
+      <!-- Card 1 -->
+      <div class="max-w-xs rounded overflow-hidden shadow-lg m-4">
+        <img
+          class="w-full"
+          src="Images/frontend.jpeg"
+          alt="Card image"
+        />
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Frontend Development</div>
+          <p class="text-gray-700 text-base">
+            Designing & Developing UI's through coding
+          </p>
+        </div>
+        <div class="px-6 py-4">
+          <a href="frontend"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-20"
+          >
+            Let's Begin
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="max-w-xs rounded overflow-hidden shadow-lg m-4">
+        <img
+          class="w-full mb-5"
+          src="Images/backend.jpeg"
+          alt="Card image"
+        />
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Backend Development</div>
+          <p class="text-gray-700 text-base">
+            Backend Development makes the Developer to play with Api's
+          </p>
+        </div>
+        <div class="px-6 py-4">
+          <a href="backend"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-20"
+          >
+            Let's Begin
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="max-w-xs rounded overflow-hidden shadow-lg m-4">
+        <img
+          class="w-full"
+          src="Images/database.jpeg"
+          alt="Card image"
+        />
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Database</div>
+          <p class="text-gray-700 text-base">
+            Learn to play with data from frontend-backend and viceversea
+          </p>
+        </div>
+        <div class="px-6 py-4">
+          <a href="database"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-20"
+          >
+            Let's Begin
+          </a>
+        </div>
+      </div>
+
+      <div class="max-w-xs rounded overflow-hidden shadow-lg m-4">
+        <img
+          class="w-full mb-5"
+          src="Images/MERN.jpeg"
+          alt="Card image"
+        />
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">MERN Stack Development</div>
+          <p class="text-gray-700 text-base">
+            Learn Frontend , Backend , Database , Frameworks Everything
+          </p>
+        </div>
+        <div class="px-6 py-4">
+          <a href="mern"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-20"
+          >
+            Let's Begin
+          </a>
+        </div>
+      </div>
+
+      <div class="max-w-xs rounded overflow-hidden shadow-lg m-4">
+        <img class="w-full" src="Images/dsa.jpeg" alt="Card image" />
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">DSA</div>
+          <p class="text-gray-700 text-base">
+            Learn Data Structure and Algorithm to Understand Coding Better
+          </p>
+        </div>
+        <div class="px-6 py-4">
+          <a href="dsa"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-20"
+          >
+            Let's Begin
+          </a>
+        </div>
+      </div>
+
+      <div class="max-w-xs rounded overflow-hidden shadow-lg m-4">
+        <img
+          class="w-full"
+          src="Images/fullstack.jpeg"
+          alt="Card image"
+        />
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Road-Maps</div>
+          <p class="text-gray-700 text-base">
+            Learn Everything in a proper step-by-step manner
+          </p>
+        </div>
+        <div class="px-6 py-4">
+          <a href="roadmaps"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-20"
+          >
+            Let's Begin
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

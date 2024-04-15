@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <nav class="bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between h-16">
+          <div class="flex">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center">
+              <img
+                class="block lg:hidden h-8 w-auto"
+                src="https://via.placeholder.com/64"
+                alt="Logo"
+              />
+              <img
+                class="hidden lg:block h-8 w-auto"
+                src="https://via.placeholder.com/64"
+                alt="Logo"
+              />
+            </div>
+          </div>
+          <!-- Login and Signup Buttons -->
+          <div class="flex items-center space-x-4">
+            <!-- Search Bar -->
+            <div class="mt-1 relative">
+              <input
+                class="bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 py-1 px-4 rounded-lg pl-10"
+                type="text"
+                placeholder="Search..."
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-6 absolute top-1.5 left-3 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </div>
+
+            <a
+              href="home"
+              class="bg-gray-700 hover:bg-gray-600 text-white py-1 px-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              Home
+            </a>
+            <a
+              href="courses"
+              class="bg-gray-700 hover:bg-gray-600 text-white py-1 px-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              Courses
+            </a>
+
+            <a
+              href="contact"
+              class="bg-gray-700 hover:bg-gray-600 text-white py-1 px-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              Contact
+            </a>
+            <a
+              href="login"
+              class="bg-gray-700 hover:bg-gray-600 text-white py-1 px-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              SignOut
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="container mx-1 flex flex-col lg:flex-row items-center align-top"
+    >
+      <!-- Image on left side (large screen) -->
+      <div class="lg:w-1/2 lg:order-1">
+        <img
+          src="Images/home.jpeg"
+          alt="Image"
+          class="w-full h-auto mt-1 lg:h-full"
+        />
+      </div>
+      <!-- Text and button on right side (large screen) -->
+      <div class="lg:w-1/2 lg:order-2 text-center lg:text-left ml-8">
+        <h1 class="text-4xl lg:text-5xl mt-16 font-bold mb-4">
+          Coding-Cafe />
+        </h1>
+        <p class="text-lg lg:text-xl text-gray-700 mb-8">
+          Coding and programming are not just about typing lines of code;
+          they're about problem-solving, creativity, and innovation. They
+          empower us to turn ideas into reality, to create solutions that can
+          change the world. Each line of code is like a brushstroke on a canvas,
+          allowing us to express our thoughts and ideas in a language that
+          computers understand. It's a journey of constant learning and growth,
+          where every challenge we overcome makes us better problem solvers.
+          Coding teaches us patience, persistence, and the ability to think
+          logically. It's a skill that opens doors to endless possibilities and
+          opportunities. So, embrace the challenges, keep learning, and let your
+          code be a reflection of your creativity and passion for making a
+          difference.Coding and programming are not just about typing lines of
+          code; they're about problem-solving, creativity, and innovation.
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <h2
+          class="text-4xl lg:text-5xl mt-16 font-bold mb-4 text-slate-700 ml-5"
+        >
+          We Offer Wide Range of Courses For Free!!!
+        </h2>
+        <p class="text-xl ml-20 mr-5">
+          There are lot of Learning Content Online/Youtube for Free. But the
+          Quality Content is not getting Highlighted , so many quality content
+          is not being recognized also. So, To HighLight the Quality Content Our
+          Website is going to help to filter the content and Provide the Right
+          Content to User's.
+        </p>
+
+        <h3 class="text-red-950">
+          <marquee>
+            Click on <b>Course Section</b> Section to Start Your Coding Jorney
+            With Quality Content Which is For freee...
+          </marquee>
+        </h3>
+      </div>
+    </div>
+  </body>
+</html>
